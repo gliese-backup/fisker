@@ -1,16 +1,23 @@
-function Layout({ children }) {
+import { Space_Grotesk } from "next/font/google";
+import "./globals.css";
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+export const metadata = {
+  title: "Fisker Ocean",
+  description: "Create your dream personalized Fisker Ocean",
+  keywords: "fisker, ocean, design, personalized, car configurator, nextjs",
+};
+
+export default function RootLayout({ children }) {
   return (
-    <html>
-      <head>
-        <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css" />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-        />
-      </head>
-      <body>{children}</body>
+    <html lang="en">
+      <body className={`${spaceGrotesk.className} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
-
-export default Layout;
