@@ -37,7 +37,7 @@ function Preview({ exterior, wheel, interior }) {
         />
       </Zoom>
       <section className="mt-4 pl-2">
-        <h3 className="text-xl font-bold">Interior Color</h3>
+        <h3 className="text-xl font-bold">Interior {interior}</h3>
       </section>
     </>
   );
